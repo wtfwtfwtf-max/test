@@ -1,0 +1,1006 @@
+*{
+    box-sizing: border-box;
+    position: relative;
+}
+
+body{
+  background-color: #FAFAFA;
+}
+
+/* 至頂按鈕的CSS 有問題需要請教 */
+.back_to_top{
+  position: fixed;
+  bottom: 100px;
+  right: 100px;
+  width: 100px;
+  height: 100px;
+  z-index: 100;
+}
+
+/* 首頁區塊 */
+.home {
+  position: relative;
+  background: #FFFFFF;
+  overflow: hidden;
+  width: 1728px;
+  margin:0 auto;
+  background-image: url("/img/Home-BG.svg") ;
+  background-repeat: no-repeat;  
+  background-position: right top;
+}
+/* 導覽列 */
+.navbar{
+  display: block;
+}
+.navbar-main {
+  display: flex;
+  justify-content: space-between;
+  /* background-color: #fff; */
+  max-width: 1728px;
+  margin: 0;
+  padding-bottom: 90px;
+}
+
+.image-1{
+  display: flex;
+}
+
+/* Logo */
+.logo{
+  margin-left: 104px;
+  margin-top: 71px;
+}
+
+.rwd-logo, .rwd-menu{
+  display: none;
+}
+
+/* 導覽連結 */
+.home-main-navbar {
+  display: flex;
+  margin-top:90px;
+  margin-right: 104px;
+}
+
+.home-main-navbar-rwd{
+  display: none;
+}
+
+.home-main-navbar-title{
+  color: #FFFFFF;
+  font-weight: 700;
+  font-size: 32px;
+  text-decoration: none;
+  margin-left: 64px;
+}
+.home-main-navbar a:hover {
+  color: #252525;   /* hover 橘色 */
+}
+
+.navbar-main-rwd{
+  display: none;
+}
+/* 右上角橘色區塊：用 bg image 疊上去 */
+/* .home::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 50%;     
+  height: 100%;
+  background: url("./Home-BG.svg") no-repeat top right;
+  background-size: cover;  
+  z-index: 0;
+} */
+
+/* 讓內容在最上層 */
+.home-main {
+  /* color: #fff; */
+  max-width: 1728px;
+  margin: 0 auto;
+  z-index: 1;
+  display: flex;
+  flex-direction: row;
+  padding-left: 104px;
+  padding-right: 128px;
+  padding-bottom: 244px;
+}
+
+/* 手機展示圖 */
+.image-2 {
+  display: block;
+  margin-left: 131px;
+  position: relative;
+}
+
+.image-2::before{
+  content: '';
+  display: block;
+  background-image: radial-gradient(#7f7f7f,White);
+  width: 100%;
+  height: 20px;
+  border-radius: 50%;
+  position: absolute;
+  left: 52px;
+  bottom: -10px;
+}
+
+
+.home_content{
+  flex-direction: column;
+  margin: 0 ;
+}
+
+/* 大標題、副標題 */
+.home-main-title {
+  width: 679px;
+  font-size: 100px;
+  /* font-weight: 900; */
+  color: #FF9E68;
+  margin-top: 249px;
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 800;
+  font-style: italic;
+  letter-spacing: 12px;
+  text-shadow: 10px 0 0 rgba(255,222,203,1);   
+}
+
+.home-main-content {
+  font-size: 48px;
+  color: #252525;
+  margin-top: 35px;
+  letter-spacing: 8.64px;
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  text-shadow: 0 4px 1px rgba(113, 113, 113, 0.15);  
+}
+
+
+
+/* Download 區塊 */
+.home-main-download {
+  margin-top: 94px;
+  display: flex;
+  gap: 16px;
+
+}
+.home-main-download img {
+  height: 50px;
+}
+
+
+
+
+
+.overview-main {
+  background: #f98d53;  /* 橘色背景 */
+  max-width: 1728px;
+  display: flex;
+  gap: 88px;
+  position: relative;   /* 為了放右下角背景圖 */
+  padding:141px 104px 119px;
+  margin: 0 auto;
+  background-image: url("/img/overview_roboticon.svg");
+  background-repeat: no-repeat;
+  background-position: right 150px bottom 0;
+}
+
+/* 右下角背景機器人 */
+/* .overview-main::after {
+  content: "";
+  position: absolute;
+  right: 104px;   
+  bottom: -60px;  
+  width: 377px;   
+  height: 376px;
+  background: url("img/overview_roboticon.svg") no-repeat center/contain;
+  opacity: 0.9;  
+  pointer-events: none; 
+} */
+
+
+
+/* 左邊手機展示 */
+.overview-display-1 {
+  display: block;
+}
+
+.overview-display-2{
+  display: none;
+}
+/* 右邊文字 */
+.overview-main-info {
+  max-width: 801px;
+  flex-direction: column;
+  margin: 0 auto;
+  padding-top: 20px;
+  gap: 47px;
+
+}
+
+.overview-main-info-title {
+  font-size: 64px;
+  font-weight: 700;
+  margin: 0 0 47px;
+  color: #FFFFFF;
+  text-align: center;
+}
+
+.overview-main-info-content {
+  max-width: 801px;
+  font-size: 36px;
+  line-height: 2;
+  margin: 0;
+  color: #FFFFFF;
+  text-align: left;
+}
+
+
+
+
+
+
+/* 整個區塊 */
+.service-main {
+  background-color: #FFFFFF;
+  max-width: 1728px;
+  margin: 0 auto;
+}
+
+/* 標題置中 */
+.service-main-title {
+  font-size: 64px;
+  font-weight: 700;
+  color: #252525;
+  text-align: center;
+  background-color: #FFFFFF;
+  margin: 0;
+  padding: 83px 0 61px;
+}
+
+/* 兩張卡片的容器 */
+.service-info {
+  display: flex;
+  flex-direction: row;
+  padding-bottom: 117px;
+  /* gap: 36px; */
+  /* margin: 0 auto; 為何寫這條並不會讓子層置中？*/ 
+}
+
+/* 卡片 */
+.service-info-1{
+  background: #FFDECB;
+  width: 742px;            
+  height: 691px;
+  border-radius: 16px;
+  padding: 48px 45px 44px;
+  box-shadow: 0 6px 18px rgba(0,0,0,.08);
+  margin-left:104px;
+  margin-right: 18px;
+}
+.service-info-2 {
+  width: 742px;            
+  height: 691px;
+  background: #FFDECB;           
+  border-radius: 16px;
+  padding: 47px 40px 44px;
+  box-shadow: 0 6px 18px rgba(0,0,0,.08);
+  margin-left:18px;
+  margin-right: 104px;
+}
+
+/* 卡片圖片 */
+.service-info-1 img,
+.service-info-2 img {
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  display: block;
+}
+
+/* 卡片標題 */
+.service-info-1-title,
+.service-info-2-title {
+  font-size: 36px;
+  font-weight: 700;
+  margin: 40px 0 28px;
+  color: #252525;
+}
+
+/* 卡片內文 */
+.service-info-1-content,
+.service-info-2-content {
+  font-size: 24px;
+  line-height: 2;
+  color: #252525;
+  font-weight: 400;
+  margin: 0;
+}
+
+
+
+
+
+
+
+
+
+.coming_soon_BG {
+  background-color: #fafafa;
+}
+
+.comingsoon {
+  background-color: #FF9E68;   /* 橘色背景 */
+  text-align: center;          /* 文字水平置中 */
+  padding: 40px 0;             /* 上下留空 */
+  max-width: 1728px;
+  margin: 0 auto; 
+}
+
+.comingsoon h4 {
+  color: #fff;                 /* 白色文字 */
+  font-size: 100px;             /* 放大字體 */
+  /* font-weight: 700;            */
+  /* font-style: italic;          */
+  margin: 0;                   /* 移除預設外距 */
+  text-shadow: 5px 0 0 rgba(255,255,255,0.3);
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 900;
+  font-style: italic;
+  letter-spacing: 12px;   
+}
+
+
+
+
+
+
+
+
+
+/* 版心 + 左右分欄 */
+.future-main {
+  padding-top: 64px;
+  padding-left:21px;
+  padding-right: 104px;
+  max-width: 1728px;
+  margin: 0 auto ;
+  display: flex;
+  gap: 100px;
+  background-color: #fff;
+  /* background: #ffffff; */
+}
+
+/* 左側示意大圖 */
+.future_demo-1 {
+  height: auto;
+  display: block;
+}
+
+.future_demo-2{
+  display: none;
+}
+
+.future-info {
+  display: flex;
+  flex-direction: column; /* 垂直排列 */
+  padding-top: 50px;
+  gap: 94px;
+  /* vertical-align: top; */
+  /* 卡片之間的間距 */
+}
+
+/* 每個小卡片：icon + 文字上下排就好 */
+.future-info-1,
+.future-info-2 {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; /* icon 與文字靠左 */
+  gap: 20px;
+}
+
+/* 標題 */
+.future-info-1-title,
+.future-info-2-title {
+  font-size: 24px;
+  font-weight: 700;
+  margin: 16px 0 0;
+  color: #252525;
+}
+
+/* 內文 */
+.future-info-1-content,
+.future-info-2-content {
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 2;
+  margin: 0 0 30px;
+  color: #252525;
+}
+
+
+
+
+
+/* .footer {
+    background: #FAFAFA;
+  } */
+  
+ 
+  .footer-main {
+    background: #303133;
+    width: 1728px;
+    height: 438px;
+    color: #fff;
+    padding: 85px 124px;      
+    display: flex;
+    margin: 0 auto;
+  }
+  
+  /* 左邊的資訊區 */
+  .footer-info {
+    max-width: 733px;       
+    margin-right:99px;
+  }
+  
+  .footer-info-title {
+    font-size: 36px;
+    font-weight: 600;
+    margin: 0 0 15px;
+  }
+  
+  .footer-info-content {
+    font-size: 24px;
+    line-height: 2;
+    color: #FFFFFF; 
+  }
+  
+  /* 右邊 follow + download */
+  .footer-followus_download {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+  }
+  
+.footer-followus-title {
+    font-size: 24px;
+    font-weight: 500;
+    margin: 0 0 25px;
+  }
+  
+  .footer-followus {
+    display: flex;
+    gap: 12px; /* icon 間距 */
+  }
+  
+  .footer-followus img {
+    width: 67px;
+    height: 67px;
+  }
+  
+  .footer-download-title {
+    font-size: 24px;
+    font-weight: 500;
+    margin: 30px 0 25px;
+  }
+  .footer-download {
+    display: flex;
+    gap: 12px; /* 兩個按鈕間距 */
+  }
+  
+  .footer-download img {
+    height: 45px; /* 確保 app store / google play 圖片一致 */
+  }
+/* .footer-main{
+    background: #000;
+    position: relative;
+}
+
+.footer-info{
+
+}
+
+.footer-info-title{
+    width: 169;
+    height: 44;
+    margin-top:85px ;
+    margin-left: 124px;
+    color: #ffffff;
+    position: absolute;
+} */
+
+@media screen and (max-width: 430px) {
+  .body{
+    width: 430px;
+  }
+
+  .back_to_top{
+    display: none;
+  }
+  
+  /* 首頁區塊 */
+  .home {
+    width: 430px;
+    margin:0 auto;
+    background-image:none
+    /* position: relative;
+    background: #FFFFFF;
+    overflow: hidden;
+    width: 1728px;
+    margin:0 auto;
+    background-image: url("/img/Home-BG.svg") ;
+    background-repeat: no-repeat;  
+    background-position: right top; */
+  }
+  /* 導覽列 */
+  .navbar{
+    position: fixed;
+    z-index: 2;
+  }
+  .navbar-main {
+    background-color: #FFFFFF;
+    width: 430px;
+    height: 64px;
+    padding: 20px;
+    padding-bottom: 20px;
+    display: block;
+    position: relative;
+    /* display: flex;
+    justify-content: space-between;
+    max-width: 1728px;
+    margin: 0;
+    padding-bottom: 90px; */
+  }
+  
+  .image-1{
+    width: 390px;
+    height: 24px;
+    position : relative;
+    display: flex;
+  }
+  
+  .logo{
+    display: none;
+  }
+  
+  .rwd-logo{
+    display: block;
+    width: 102px;
+    height: 24px;
+    position: absolute;
+    margin: 0;
+    z-index: 3;
+  }
+  
+  .rwd-menu{
+    display: block;
+    width: 24px;
+    height: 24px;
+    position: absolute;
+    right: 0;
+    margin: 0;
+    z-index: 3;
+  }
+  /* 導覽連結 */
+  .home-main-navbar{
+    display: none;
+  }
+  .home-main-navbar-rwd {
+    position: absolute;
+    display: none;
+    background-color: rgba(37,37,37,0.8);
+    width: 95px;
+    height: 156px;
+    flex-direction: column;
+    padding: 16px 10px;
+    margin: 6px 0 ;
+    border-radius: 16px;
+    right: 20px;
+    /* display: flex;
+    margin-top:90px;
+    margin-right: 104px;*/
+  }
+  .home-main-navbar-title-rwd{
+    display: flex;
+    font-size: 16px;
+    margin: 0 auto;
+    justify-content:space-around;
+    margin-bottom: 16px;
+    color: #FFFFFF;
+    font-weight: 700;
+    text-decoration: none;
+    /* color: #FFFFFF;
+    font-weight: 700;
+    font-size: 24px;
+    text-decoration: none;
+    margin-left: 64px; */
+  }
+  .home-main-navbar-rwd a:hover {
+    color: #FFFFFF; 
+  }
+  
+
+
+  .home-main {
+    width: 430px;
+    padding-left: 50px;
+    padding-right: 50px;
+    padding-bottom: 63px;
+    display: block;
+    /* max-width: 1728px;
+    margin: 0 auto;
+    z-index: 1;
+    display: flex;
+    flex-direction: row;
+    padding-left: 104px;
+    padding-right: 128px;
+    padding-bottom: 244px; */
+  }
+
+  .Home_demo{
+    width: 223px;
+    height: 326px;
+    margin: 0 auto;
+  }
+
+  /* 手機展示圖 */
+  .image-2 {
+    width: 223px;
+    height: 326px;
+    margin: 45px auto 0;
+    /* display: block;
+    margin-left: 131px;
+    position: relative; */
+  }
+  
+  .image-2::before{
+    background-image: radial-gradient(#919191,White);
+    left: 20px;
+    bottom: -5px;
+  }
+  
+  
+  /* 大標題、副標題 */
+  .home-main-title {
+    display: flex;
+    width: 331px;
+    font-size: 48px;
+    margin: 89px auto 13px;
+    letter-spacing: 5px;
+    text-shadow: 5px 0 0 rgba(255,222,203,1); 
+    justify-content: space-around;
+    /* width: 679px;
+    font-size: 100px;
+    margin-top: 249px;
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 800;
+    font-style: italic;
+    letter-spacing: 12px;
+    text-shadow: 10px 0 0 rgba(255,222,203,1);    */
+  }
+  
+  .home-main-content {
+    display: flex;
+    font-size: 24px;
+    margin: 0 auto 40px;
+    letter-spacing: 8.64px;
+    justify-content: space-around;
+    /* text-shadow: 0 4px 1px rgba(113, 113, 113, 0.15); */
+    /* font-size: 48px;
+    color: #252525;
+    margin-top: 35px;
+    letter-spacing: 8.64px;
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    text-shadow: 0 4px 1px rgba(113, 113, 113, 0.15);   */
+  }
+  
+  
+  
+  /* Download 區塊 */
+  .home-main-download {
+    width: 390px;
+    margin-top: 40px;
+    gap: 13px;
+    padding-left: 57px;
+    
+    /* margin-top: 94px;
+    display: flex;
+    gap: 16px; */
+  
+  }
+  .home-main-download img {
+    height: 31px;
+  }
+
+  .overview-main {
+    width: 430px;
+    display: block;
+    padding: 20px;
+    background-position: right 10px bottom -20px;
+    background-size: 105px 105px;
+    /* background: #f98d53; 
+    max-width: 1728px;
+    display: flex;
+    gap: 88px;
+    position: relative;   
+    padding:141px 104px 119px;
+    margin: 0 auto;
+    background-image: url("/img/overview_roboticon.svg");
+    background-repeat: no-repeat;
+    background-position: right 150px bottom 0; */
+  }
+    
+  .overview-display-1 {
+    display: none;
+  }
+
+  .overview-display-2{
+    display: block;
+    width: 300px;
+    height: auto;
+    margin: 0 auto;
+  }
+  
+  /* 右邊文字 */
+  .overview-main-info {
+    width: 390px;
+    margin-bottom: 28px;
+    /* max-width: 801px;
+    flex-direction: column;
+    margin: 0 auto;
+    padding-top: 20px;
+    gap: 47px; */
+  
+  }
+  
+  .overview-main-info-title {
+    font-size: 32px;
+    margin: 0 0 12px;
+    /* font-size: 64px;
+    font-weight: 700;
+    margin: 0 0 47px;
+    color: #FFFFFF;
+    text-align: center; */
+  }
+  
+  .overview-main-info-content {
+    width: 390px;
+    font-size: 20px;
+    /* max-width: 801px;
+    font-size: 36px;
+    line-height: 2;
+    margin: 0;
+    color: #FFFFFF;
+    text-align: left; */
+  }
+
+  .service-main {
+    width: 430px;
+    /* background-color: #FFFFFF;
+    max-width: 1728px;
+    margin: 0 auto; */
+  }
+  
+  /* 標題置中 */
+  .service-main-title {
+    font-size: 32px;
+    padding: 19px;
+    /* font-size: 60px;
+    font-weight: 700;
+    color: #252525;
+    text-align: center;
+    background-color: #FFFFFF;
+    margin: 0;
+    padding: 83px 0 61px; */
+  }
+  
+  /* 兩張卡片的容器 */
+  .service-info {
+    display: block;
+    width: 430px;
+    padding-bottom: 20px;
+    /* display: flex;
+    flex-direction: row;
+    padding-bottom: 117px; */
+    /* gap: 36px; */
+    /* margin: 0 auto; 為何寫這條並不會讓子層置中？*/ 
+  }
+  
+  /* 卡片 */
+  .service-info-1{
+    width: 390px; 
+    height: 478px;
+    padding: 16px;
+    margin: 0 auto;
+    margin-bottom: 20px;
+    /* background: #FFDECB;
+    width: 742px;            
+    height: 691px;
+    border-radius: 16px;
+    padding: 48px 45px 44px;
+    box-shadow: 0 6px 18px rgba(0,0,0,.08);
+    margin-left:104px;
+    margin-right: 18px; */
+  }
+  .service-info-2 {
+    width: 390px; 
+    height: 430px;
+    padding: 16px;
+    /* width: 742px;            
+    height: 691px;
+    background: #FFDECB;           
+    border-radius: 16px;
+    padding: 47px 40px 44px;
+    box-shadow: 0 6px 18px rgba(0,0,0,.08);
+    margin-left:18px;
+    margin-right: 104px; */
+  }
+  
+  /* 卡片圖片 */
+  .service-info-1 img,
+  .service-info-2 img {
+    width: 359px;
+    /* width: 100%;
+    height: auto;
+    border-radius: 12px;
+    display: block; */
+  }
+  
+  /* 卡片標題 */
+  .service-info-1-title,
+  .service-info-2-title {
+    font-size: 24px;
+    margin: 12px 0 ;
+    /* font-size: 36px;
+    font-weight: 700;
+    margin: 40px 0 28px;
+    color: #252525; */
+  }
+  
+  /* 卡片內文 */
+  .service-info-1-content,
+  .service-info-2-content {
+    font-size: 20px;
+    /* font-size: 24px;
+    line-height: 2;
+    color: #252525;
+    font-weight: 400;
+    margin: 0; */
+  }
+  
+  .comingsoon {
+    padding: 20px 0;           
+    width: 430px;
+    letter-spacing: 5px; 
+  }
+  
+  .comingsoon h4 {
+    color: #fff;                 
+    font-size: 32px;
+    letter-spacing: 5px; 
+    text-shadow: 2px 0 0 rgba(255,255,255,0.3);
+    /* color: #fff;                
+    font-size: 100px;             
+    margin: 0;                   
+    text-shadow: 5px 0 0 rgba(255,255,255,0.3);
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 900;
+    font-style: italic;
+    letter-spacing: 12px;             */
+  }
+
+  .future-main {
+    padding-top: 32px;
+    padding-left:20px;
+    padding-right: 20px;
+    width: 430px;
+    display: block;
+  }
+  
+
+  
+  
+  .future-info {
+    padding-top: 0px;
+    gap: 20px;
+  }
+  
+  /* 每個小卡片：icon + 文字上下排就好 */
+  .future-info-1,
+  .future-info-2 {
+    /* display: flex;
+    flex-direction: column; */
+    gap: 16px;
+    width: 390px;
+  }
+
+  .future_homepage,
+  .future-findpass{
+    height: 64px;
+    width: 64px;
+  }
+  
+  /* 標題 */
+  .future-info-1-title,
+  .future-info-2-title {
+    margin: 18px 0 0;
+  }
+  
+  /* 內文 */
+  .future-info-1-content,
+  .future-info-2-content {
+    font-size: 20px;
+    margin: 0 0 20px;
+  }
+
+  /* 左側示意大圖 */
+  .future_demo-1 {
+    display: none;
+  }
+
+  .future_demo-2{
+    height: auto;
+    display: block;
+    width: 390px;
+  }
+
+
+  .footer-main {
+    margin: 0 auto;
+    width: 430px;
+    height: 280px;
+    padding: 38px 106px;   
+    /* padding: 38px 0px;*/
+  }
+    
+  /* 左邊的資訊區 */
+  .footer-info {
+    display: none; 
+  }
+    
+    
+  /* 右邊 follow + download */
+  .footer-followus_download {
+    text-align: center;
+    justify-content: center; /* 主軸（垂直）置中 */
+    align-items: center;     /* 交叉軸（水平方向）置中 */
+  }
+    
+  .footer-followus-title {
+    font-size: 16px;
+    font-weight: 500;
+    margin: 0 0 20px;
+  }
+    
+  .footer-followus {
+    gap: 8px; 
+  }
+    
+  .footer-followus img {
+    width: 42px;
+    height: 42px;
+  }
+    
+  .footer-download-title {
+    font-size: 16px;
+    font-weight: 500;
+    margin: 38px 0 20px;
+  }
+  .footer-download {
+    display: flex;
+  }
+    
+  .footer-download img {
+    height: 31px; /* 確保 app store / google play 圖片一致 */
+  }
+}
+
+
+  
